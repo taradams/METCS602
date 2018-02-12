@@ -1,1 +1,1 @@
- The purpose of this app is to sell chocolates.
+ This is a homework assignment for BU MET CS602. 
