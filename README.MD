@@ -1,0 +1,1 @@
+ The purpose of this app is to sell chocolates.
