@@ -15,6 +15,21 @@
    
     <h1>Chocolate!</h1>
 
+    <h3> Thank you for your order!</h3>
+
+    <h3>Order Summary:</h3>
+    <!--somehow need to format the prices better -->
+    <ul>
+      <% for(i = 0; i < inventory.length; i++) { %>
+       <% if(cart[i] > 0){ %>
+          <li><%=cart[i]%> <%= inventory[i].itemName %> : $<%= prices[i] %></li>
+      <% } } %>
+  </ul>
+ <p> Subtotal: $<%=subtotal%></p>
+ <!-- need to format this one better -->
+ <p>Tax: $<%= subtotal * .0625%></p>
+ <p>Shipping: $<%=shipping%></p>
+ <p>Order Total: $<%= shipping + subtotal + (subtotal * .0625)%></p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

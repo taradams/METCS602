@@ -19,12 +19,20 @@
     <!--somehow need to format the prices better -->
     <ul>
       <% for(i = 0; i < inventory.length; i++) { %>
-       <% if(cart["item"+i] > 0){ %>
-          <li><%=cart["item"+i]%> <%= inventory[i].itemName %> : $<%= prices[i] %>0</li>
+       <% if(cart[i] > 0){ %>
+          <li><%=cart[i]%> <%= inventory[i].itemName %> : $<%= prices[i] %></li>
       <% } } %>
   </ul>
- <p> Subtotal: $<%=subtotal%>0</p>
+ <p> Subtotal: $<%=subtotal%></p>
 
+
+ <form action="/edit" method="POST" role = "form">
+  <input type="submit" value="Continue Shopping">
+</form> 
+<br>
+<form action="/thankyou" method="POST" role = "form">
+  <input type="submit" value="Complete Purchase">
+</form> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
