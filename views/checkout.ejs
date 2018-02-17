@@ -16,12 +16,15 @@
     <h1>Chocolate!</h1>
 
     <h3>Order Summary:</h3>
+    <!--somehow need to format the prices better -->
+    <ul>
+      <% for(i = 0; i < inventory.length; i++) { %>
+       <% if(cart["item"+i] > 0){ %>
+          <li><%=cart["item"+i]%> <%= inventory[i].itemName %> : $<%= prices[i] %>0</li>
+      <% } } %>
+  </ul>
+ <p> Subtotal: $<%=subtotal%>0</p>
 
-    
-
-    <form action="/edit" method="POST" role = "form">
-      <input type="submit" value="Edit Order">
-    </form> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

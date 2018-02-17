@@ -15,24 +15,16 @@
    
     <h1>Chocolate!</h1>
     
-    <form action="/checkout?form=checkout" method="POST" role = "form">
-      Chocolate Turtles:<br>
-      <input type="number" name="turtles" placeholder="quantity">
-      <br>
-      Milk Chocolate Squares:<br>
-      <input type="number" name="milk" placeholder="quantity">
-      <br>
-      Peppermint Patties:<br>
-      <input type="number" name="peppermint" placeholder="quantity">
-      <br>
-      Espresso Beans:<br>
-      <input type="number" name="espresso" placeholder="quantity">
-      <br>
-      Toffee Squares:<br>
-      <input type="number" name="toffee" placeholder="quantity">
-      <br><br>
-      <input type="submit" value="Checkout">
-    </form> 
+
+<form action="/checkout?form=checkout" method="POST" role = "form">
+  <% inventory.forEach(function(chocolate) { %>
+    <%=chocolate.itemName %><br>
+    <input type = "number" placeholder = "quantity" name = "item<%=chocolate.itemID %>" >
+    <br>
+<% }); %> 
+  <br>
+  <input type="submit" value="Checkout">
+</form> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
