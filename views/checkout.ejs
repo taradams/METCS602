@@ -20,13 +20,18 @@
     <ul>
       <% for(i = 0; i < inventory.length; i++) { %>
        <% if(cart[i] > 0){ %>
-          <li><%=cart[i]%> <%= inventory[i].itemName %> : $<%= prices[i] %></li>
+          <li><%=cart[i]%> <%= inventory[i].itemName %> : $<%= prices[i] %> 
+             <form action="/edit" method="POST" role = "form">
+                <input type="submit" value="Edit Quantity">
+                <input type = "number" placeholder = "quantity" name = "item<%=inventory[i].itemID %>" >
+            </form> 
+        </li>
       <% } } %>
   </ul>
  <p> Subtotal: $<%=subtotal%></p>
 
 
- <form action="/edit" method="POST" role = "form">
+ <form action="/continue" method="POST" role = "form">
   <input type="submit" value="Continue Shopping">
 </form> 
 <br>
