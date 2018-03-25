@@ -1,0 +1,1 @@
+This repository contains my homework assignments and labs for the Spring semester of Server Side Web Development METCS602 at Boston University. 
